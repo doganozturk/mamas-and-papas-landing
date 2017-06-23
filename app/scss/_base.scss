@@ -1,0 +1,26 @@
+// ===========
+//  DEVICE-WIDTHS
+// ========
+$screen-desktop: 960px;
+
+// ===========
+//  BASE STYLES
+// ========
+body {
+  width: auto;
+
+  input {
+    border: none;
+    background-image: none;
+    background-color: transparent;
+    box-shadow: none;
+  }
+
+  // ===========
+  //  DESKTOP STYLES
+  // ========
+  @media (min-width: $screen-desktop) {
+    width: 960px;
+    margin: 0 auto;
+  }
+}

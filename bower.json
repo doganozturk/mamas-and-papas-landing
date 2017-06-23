@@ -1,0 +1,10 @@
+{
+  "name": "mamas-and-papas-landing",
+  "authors": [
+    "Doğan Öztürk"
+  ],
+  "dependencies": {
+    "flexboxgrid": "6.3.1",
+    "jquery": "3.2.1"
+  }
+}
