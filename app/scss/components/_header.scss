@@ -1,0 +1,41 @@
+.header {
+  @include sprite($mobile-header);
+
+  position: relative;
+  height: auto;
+  margin: 16px 0 0 0;
+  padding: 0;
+  background-repeat: no-repeat;
+
+  &__logo {
+    @include sprite($logo);
+
+    margin: 50px auto 36px auto;
+  }
+
+  &__info {
+    margin-bottom: 30px;
+    text-align: center;
+
+    p:first-child {
+      margin-bottom: 19px;
+      font-size: 23px;
+      font-weight: bold;
+      color: $header-info-text-color;
+    }
+
+    p:last-child {
+      color: $header-info-text-color;
+      font-size: 17px;
+      font-weight: 400;
+    }
+  }
+
+  &__golden-badge {
+    @include sprite($golden-badge);
+
+    position: absolute;
+    top: 39px;
+    right: 9px;
+  }
+}

@@ -1,0 +1,44 @@
+.call-to-action {
+  margin-bottom: 30px;
+  text-align: center;
+
+  &__title {
+    color: $white-color;
+    margin-bottom: 12px;
+
+    p:first-child, p:nth-child(2) {
+      font-size: 28px;
+      line-height: 34px;
+    }
+
+    p:last-child {
+      font-size: 16px;
+      line-height: 46px;
+    }
+  }
+
+  &__info {
+    margin-bottom: 27px;
+    padding: 0 23px;
+
+    p {
+      font-family: "Helvetica Neue";
+      font-size: 13px;
+      font-weight: 400;
+      letter-spacing: normal;
+      line-height: 24px;
+      color: $call-to-action-info-text-color;
+    }
+  }
+
+  &__button {
+    > div {
+      width: 232px;
+      height: 12px;
+      margin: 0 auto;
+      padding: 24px;
+      color: $white-color;
+      background-color: $call-to-action-info-btn-color;
+    }
+  }
+}

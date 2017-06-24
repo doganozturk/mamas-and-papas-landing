@@ -1,0 +1,70 @@
+.steps {
+  &__box {
+    @include sprite($step-bg);
+
+    height: 225px;
+    margin: 0 auto;
+    padding-top: 40px;
+
+    &__number {
+      width: 90px;
+      height: 90px;
+      margin: 0 auto;
+      transform: rotate(45deg);
+
+      &--color-1 {
+        background-color: $steps-number-color-1;
+      }
+
+      &--color-2 {
+        background-color: $steps-number-color-2;
+      }
+
+      &--color-3 {
+        background-color: $steps-number-color-3;
+      }
+
+      p {
+        position: absolute;
+        color: $white-color;
+        transform: rotate(-45deg);
+
+        &:first-child {
+          top: 25px;
+          left: 15px;
+          font-size: 16px;
+        }
+
+        &:last-child {
+          top: 35px;
+          left: 45px;
+          font-size: 37px;
+        }
+      }
+    }
+
+    &__info {
+      margin: 42px auto 0 auto;
+      font-size: 19px;
+      font-weight: bold;
+      line-height: 25px;
+      text-align: center;
+      color: $black-color;
+
+      &--variant-1 {
+        width: 121px;
+        height: 45px;
+      }
+
+      &--variant-2 {
+        width: 145px;
+        height: 45px;
+      }
+
+      &--variant-3 {
+        width: 192px;
+        height: 46px;
+      }
+    }
+  }
+}

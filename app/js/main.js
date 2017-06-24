@@ -1,6 +1,4 @@
 (function() {
-  'use strict';
-
-  console.log('LOL');
-
+  "use strict";
+  console.log("LOL");
 })();

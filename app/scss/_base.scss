@@ -8,12 +8,19 @@ $screen-desktop: 960px;
 // ========
 body {
   width: auto;
+  font-family: $font-family;
+  letter-spacing: -1px;
+  background-color: $background-color;
 
   input {
     border: none;
     background-image: none;
     background-color: transparent;
     box-shadow: none;
+  }
+
+  p {
+    margin: 0;
   }
 
   // ===========

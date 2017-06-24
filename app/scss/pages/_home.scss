@@ -1,7 +1,11 @@
 .home {
-
+  padding: 0;
   // ===========
   //  COMPONENTS
   // ========
-  
+  @import '../components/_header.scss';
+  @import '../components/_call-to-action.scss';
+  @import '../components/_steps.scss';
+  @import '../components/_form.scss';
+  @import '../components/_footer.scss';
 }
