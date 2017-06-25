@@ -1,4 +1,6 @@
 .steps {
+  margin-bottom: 10px;
+
   &__box {
     @include sprite($step-bg);
 

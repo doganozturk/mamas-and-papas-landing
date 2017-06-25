@@ -1,0 +1,58 @@
+.footer {
+  position: relative;
+  height: 370px;
+  text-align: center;
+
+  &__share-text {
+    width: 230px;
+    height: 35px;
+    margin: 30px auto 20px auto;
+    color: $footer-share-text-color;
+    font-size: 16px;
+    line-height: 21px;
+  }
+
+  &__share-icons {
+    display: flex;
+    justify-content: center;
+    height: auto;
+    margin-bottom: 28px;
+
+    &__facebook {
+      @include sprite($facebook);
+    }
+
+    &__twitter {
+      @include sprite($twitter);
+
+      margin: 0 20px;
+    }
+
+    &__instagram {
+      @include sprite($instagram);
+    }
+  }
+
+  &__customer-care {
+    width: 220px;
+    height: 33px;
+    margin: 0 auto 22px auto;
+    font-family: $font-family-secondary;
+    font-size: 12px;
+    line-height: 24px;
+    color: $footer-customer-care-color;
+
+    a {
+      color: inherit;
+      text-decoration: inherit;
+    }
+  }
+
+  &__car-and-road {
+    @include sprite($mobile-footer);
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+}
