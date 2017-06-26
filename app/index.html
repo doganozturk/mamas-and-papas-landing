@@ -68,7 +68,7 @@
                 We’re on a journey to make parenting easier and baby’s days happier. Share with us your top tip to make parenting that little bit easier, for the chance to be one of 50 lucky customers to win a gift from Mamas & Papas.*
               </p>
             </div>
-            <div class="call-to-action__button">
+            <div id="callToActionButton" class="call-to-action__button">
               <div>
                 <p>
                   ENTER OUR COMPETITION NOW
@@ -132,7 +132,7 @@
           </div>
         </section>
 
-        <section class="form row">
+        <section id="shareYourTopTipForm" class="form row">
           <div class="col-xs-12">
             <div class="form__title">
               <p>
@@ -143,13 +143,13 @@
               </p>
             </div>
             <form action="">
-              <div class="form__control form__control--valid-variant">
+              <div class="form__control">
                 <label for="email">Email Address*</label>
-                <input type="text" id="email" name="email">
+                <input type="text" id="email" name="email" required>
               </div>
-              <div class="form__control form__control--error-variant">
+              <div class="form__control">
                 <label for="mobile">Mobile*</label>
-                <input type="text" id="mobile" name="mobile">
+                <input type="text" id="mobile" name="mobile" data-mask="+000 000 00 00 00" required>
               </div>
               <div class="form__text">
                 <p>
@@ -158,27 +158,27 @@
               </div>
               <div class="form__group form__group--radio-variant">
                 <div class="form__control">
-                  <input type="radio" name="parent" id="parent" value="parent" checked><label for="parent">Parent</label></input>
+                  <input type="radio" name="parent" id="parent" value="parent" checked required><label for="parent">Parent</label></input>
                 </div>
                 <div class="form__control">
-                  <input type="radio" name="parent" id="parentToBe" value="parent to be"><label for="parentToBe">Parent to be</label></input>
+                  <input type="radio" name="parent" id="parentToBe" value="parent to be" required><label for="parentToBe">Parent to be</label></input>
                 </div>
                 <div class="form__control">
-                  <input type="radio" name="parent" id="other" value="other"><label for="other">Other</label></input>
+                  <input type="radio" name="parent" id="other" value="other" required><label for="other">Other</label></input>
                 </div>
               </div>
-              <div class="form__group form__group--add-child-variant">
+              <div id="formGroupAddChildVariant" class="form__group form__group--add-child-variant">
                 <div class="form__control">
                   <label for="name">Name</label>
-                  <input type="text" id="name" name="name">
+                  <input type="text" id="name" name="name" required>
                 </div>
                 <div class="form__control form__control--birthdate-variant">
                   <label for="birthdate">Birth Date</label>
-                  <input type="text" id="birthdate" name="birthdate">
+                  <input type="text" id="birthdate" name="birthdate" required>
                 </div>
                 <div class="form__control form__control--select-variant">
                   <label for="gender">Gender</label>
-                  <select name="gender">
+                  <select name="gender" required>
                     <option value="">Choose</option>
                     <option value="female">Female</option>
                     <option value="male">Male</option>
@@ -190,7 +190,7 @@
               </div>
               <div class="form__control">
                 <label for="toptip">Share with us your top tip</label>
-                <textarea name="toptip" id="toptip" cols="30" rows="10" placeholder="Tell us in 200 words …"></textarea>
+                <textarea name="toptip" id="toptip" cols="30" rows="10" placeholder="Tell us in 200 words …" required></textarea>
               </div>
               <div class="form__control form__control--button-variant form__control--button-variant-blue">
                 <input type="submit" value="PROCEED TO NEXT STEP">

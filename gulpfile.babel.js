@@ -68,6 +68,7 @@ gulp.task("styles:concat", () => {
   return gulp
     .src([
       "./bower_components/flexboxgrid/css/flexboxgrid.css",
+      "./bower_components/zebra_datepicker/dist/css/bootstrap/zebra_datepicker.css",
       ".tmp/css/*.css",
       "!.tmp/css/styles.css"
     ])
@@ -95,7 +96,13 @@ gulp.task("styles:minify", () =>
 // Concatenate JavaScript.
 gulp.task("scripts:concat", () =>
   gulp
-    .src(["./bower_components/jquery/dist/jquery.js", "./app/js/main.js"])
+    .src([
+      "./bower_components/jquery/dist/jquery.js",
+      "./bower_components/jquery-validation/dist/jquery.validate.js",
+      "./bower_components/jquery-mask-plugin/dist/jquery.mask.js",
+      "./bower_components/zebra_datepicker/dist/zebra_datepicker.src.js",
+      "./app/js/main.js"
+    ])
     .pipe($.newer(".tmp/js"))
     .pipe($.sourcemaps.init())
     .pipe($.babel())

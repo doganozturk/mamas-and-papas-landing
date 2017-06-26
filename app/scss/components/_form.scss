@@ -42,7 +42,7 @@
 
       input[type="text"] {
         display: block;
-        width: 98%;
+        width: 100%;
         height: 44px;
         padding-left: 20px;
         font-size: 14px;
@@ -52,6 +52,11 @@
 
       &--birthdate-variant {
         position: relative;
+        cursor: pointer;
+
+        input {
+          cursor: pointer;
+        }
 
         &:after {
           @include sprite($datepicker);
@@ -66,8 +71,8 @@
       &--valid-variant {
         position: relative;
 
-        input[type="text"] {
-          border-color: $form-input-border-color-valid;
+        input[type="text"], select, textarea {
+          border-color: $form-input-border-color-valid !important;
         }
 
         &:after {
@@ -81,8 +86,8 @@
       }
 
       &--error-variant {
-        input[type="text"] {
-          border-color: $form-input-border-color-error;
+        input[type="text"], select, textarea {
+          border-color: $form-input-border-color-error !important;
         }
       }
 
@@ -121,11 +126,18 @@
         margin: 20px auto;
         text-align: center;
         background-color: $form-group-button-color;
+        transition: background-color .5s cubic-bezier(0.185, 0.54, 0.355, 1);
+        cursor: pointer;
+
+        &:hover {
+          background-color: lighten($form-group-button-color, 5%);
+        }
 
         input {
           margin-top: 14px;
           color: white;
           font-size: 15px;
+          cursor: pointer;
         }
 
         &-blue {
@@ -167,6 +179,16 @@
 
       input[type="text"] {
         background-color: $white-color;
+      }
+
+      &--add-child-variant {
+        .form__control--valid-variant {
+          &:after {
+            @include sprite($valid);
+
+            top: 54px !important;
+          }
+        }
       }
 
       &--radio-variant {
@@ -211,6 +233,7 @@
             padding-left: 30px;
             vertical-align: middle;
             line-height: 20px;
+            cursor: pointer;
 
             &:before {
               position: absolute;
@@ -257,6 +280,7 @@
           bottom: 100%;
           left: 5%;
           border: solid transparent;
+          transition: left .5s cubic-bezier(0.185, 0.54, 0.355, 1);
         }
 
         &:after {
@@ -282,6 +306,18 @@
         &--arrow-position-right {
           &:after, &:before {
             left: 72%;
+          }
+        }
+
+        &.duplicate {
+          margin-top: 10px;
+
+          &:after, &:before {
+            content: none;
+          }
+
+          .form__control--button-variant {
+            background-color: $form-group-button-color-remove;
           }
         }
       }
@@ -340,7 +376,7 @@
         &--valid-variant {
           &:after {
             top: 52px;
-            right: 9px;
+            right: 0;
           }
         }
 

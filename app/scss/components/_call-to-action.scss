@@ -42,6 +42,12 @@
       padding: 24px;
       color: $white-color;
       background-color: $call-to-action-info-btn-color;
+      cursor: pointer;
+      transition: background-color .5s cubic-bezier(.185, .54, .355, 1);
+
+      &:hover {
+        background-color: lighten($call-to-action-info-btn-color, 5%);
+      }
     }
   }
 
