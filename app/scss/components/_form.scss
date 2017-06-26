@@ -116,7 +116,7 @@
       }
 
       &--button-variant {
-        width: 254px;
+        width: 98%;
         height: 49px;
         margin: 20px auto;
         text-align: center;
@@ -129,13 +129,13 @@
         }
 
         &-blue {
-          width: 272px;
           margin-bottom: 30px;
           background-color: $form-group-button-color-alternate;
         }
       }
 
       textarea {
+        width: 100%;
         height: 100px;
         padding: 18px 20px;
         box-sizing: border-box;
@@ -282,6 +282,149 @@
         &--arrow-position-right {
           &:after, &:before {
             left: 72%;
+          }
+        }
+      }
+    }
+  }
+
+  // ===========
+  //  DESKTOP STYLES
+  // ========
+  @media (min-width: $screen-desktop) {
+    &__title {
+      margin-top: 60px;
+      margin-bottom: 38px;
+
+      p:first-child {
+        margin-bottom: 26px;
+        font-size: 38px;
+      }
+
+      p:last-child {
+        font-size: 16px;
+      }
+    }
+
+    form {
+      width: 830px;
+      margin: 0 auto 60px auto;
+      text-align: left;
+
+      > .form__control {
+        margin: 0 0 10px 0;
+
+        &:first-child, &:nth-child(2) {
+          display: inline-block;
+          width: 398px;
+          margin: 0;
+        }
+
+        &:first-child {
+          margin-right: 30px;
+        }
+
+        label {
+          font-size: 16px;
+          line-height: 52px;
+
+          &[for="toptip"] {
+            margin: 25px 0 0 0;
+          }
+        }
+
+        textarea {
+          font-size: 16px;
+        }
+
+        &--valid-variant {
+          &:after {
+            top: 52px;
+            right: 9px;
+          }
+        }
+
+        &--button-variant {
+          width: 100%;
+          margin: 0 auto;
+        }
+      }
+
+      .form__text {
+        display: inline-block;
+        margin-right: 24px;
+        margin-top: 40px;
+        font-size: 16px;
+      }
+
+      .form__group {
+        &--add-child-variant {
+          margin: 0;
+
+          .form__control {
+            display: inline-block;
+            width: 208px;
+            margin: 0 2px 20px 2px;
+
+            input[type="text"], select {
+              height: 48px;
+              margin-top: 8px;
+            }
+
+            label {
+              margin-top: 8px;
+            }
+
+            &--button-variant {
+              width: 134px;
+            }
+
+            &--select-variant {
+              margin-right: 9px;
+
+              select {
+                -webkit-appearance: none;
+              }
+
+              &:after {
+                top: 52px;
+              }
+            }
+
+            &--birthdate-variant {
+              &:after {
+                top: 67px;
+              }
+            }
+          }
+
+          &:after, &:before {
+            left: 9%;
+          }
+
+          &--arrow-position-middle {
+            &:after, &:before {
+              left: 23%;
+            }
+          }
+
+          &--arrow-position-right {
+            &:after, &:before {
+              left: 40%;
+            }
+          }
+        }
+
+        &--radio-variant {
+          display: inline-block;
+
+          .form__control {
+            display: inline;
+            margin-right: 36px !important;
+
+            label {
+              font-size: 16px;
+            }
           }
         }
       }

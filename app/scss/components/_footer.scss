@@ -1,6 +1,7 @@
 .footer {
   position: relative;
   height: 370px;
+  overflow: hidden;
   text-align: center;
 
   &__share-text {
@@ -48,11 +49,54 @@
     }
   }
 
-  &__car-and-road {
-    @include sprite($mobile-footer);
-
+  &__background {
     position: absolute;
-    bottom: 0;
-    left: 0;
+
+    &--car {
+      @include sprite($car);
+
+      left: 33px;
+      bottom: 66px;
+    }
+
+    &--road {
+      @include sprite($road);
+
+      bottom: 0;
+      left: 0;
+      z-index: -1;
+    }
+  }
+
+  // ===========
+  //  DESKTOP STYLES
+  // ========
+  @media (min-width: $screen-desktop) {
+    height: 230px;
+
+    &__share-text {
+      display: none;
+    }
+
+    &__share-icons {
+      margin-top: 45px;
+      margin-bottom: 36px;
+
+      &__twitter {
+        margin: 0 10px;
+      }
+    }
+
+    &__customer-care {
+      width: 352px;
+
+      p {
+        display: inline;
+      }
+    }
+
+    &__background {
+      display: none;
+    }
   }
 }

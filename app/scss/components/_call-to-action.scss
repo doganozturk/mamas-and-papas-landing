@@ -32,13 +32,59 @@
   }
 
   &__button {
+    width: 98%;
+    margin: 0 auto;
+
     > div {
-      width: 232px;
+      width: auto;
       height: 12px;
       margin: 0 auto;
       padding: 24px;
       color: $white-color;
       background-color: $call-to-action-info-btn-color;
+    }
+  }
+
+  // ===========
+  //  DESKTOP STYLES
+  // ========
+  @media (min-width: $screen-desktop) {
+    margin-bottom: 61px;
+
+    &__title {
+      p:first-child, p:nth-child(2) {
+        display: inline;
+        font-size: 53px;
+        font-weight: bold;
+        line-height: 34px;
+      }
+
+      p:last-child {
+        font-size: 20px;
+        font-weight: bold;
+        line-height: 60px;
+      }
+    }
+
+    &__info {
+      width: 673px;
+      height: 89px;
+      margin: 0 auto 36px auto;
+
+      p {
+        font-size: 16px;
+        line-height: 36px;
+      }
+    }
+
+    &__button {
+      max-width: 570px;
+      margin: 0 auto;
+
+      > div {
+        padding: 28px 24px 20px 24px;
+        font-size: 20px;
+      }
     }
   }
 }

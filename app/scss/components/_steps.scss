@@ -1,10 +1,18 @@
 .steps {
   margin-bottom: 10px;
 
+  > div:first-child, > div:nth-child(2) {
+    margin-bottom: 10px;
+  }
+
+  > div:last-child {
+    margin-bottom: 15px;
+  }
+
   &__box {
     @include sprite($step-bg);
 
-    height: 225px;
+    height: 214px;
     margin: 0 auto;
     padding-top: 40px;
 
@@ -66,6 +74,60 @@
       &--variant-3 {
         width: 192px;
         height: 46px;
+      }
+    }
+  }
+
+  // ===========
+  //  DESKTOP STYLES
+  // ========
+  @media (min-width: $screen-desktop) {
+    > div {
+      display: inline-block;
+      flex-basis: initial;
+      margin-bottom: 0;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 0;
+
+      &:first-child {
+        margin-left: 0;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    &__box {
+      @include sprite($desktop-step-bg);
+
+      height: 254px;
+
+      &__number {
+        width: 100px;
+        height: 100px;
+        margin: 20px auto;
+
+        p {
+          &:first-child {
+            top: 30px;
+            left: 20px;
+          }
+
+          &:last-child {
+            top: 40px;
+            left: 50px;
+            font-size: 39px;
+          }
+        }
+      }
+
+      &__info {
+        &--variant-2 {
+          width: 127px;
+          height: 74px;
+        }
       }
     }
   }

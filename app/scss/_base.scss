@@ -28,11 +28,54 @@ body {
     margin-right: 0;
   }
 
+  .body-background-footer, .body-background-header {
+    display: none;
+  }
+
   // ===========
   //  DESKTOP STYLES
   // ========
   @media (min-width: $screen-desktop) {
-    width: 960px;
-    margin: 0 auto;
+    position: relative;
+    overflow-x: hidden;
+
+    .body-background-footer {
+      display: initial;
+      position: absolute;
+
+      &--road {
+        @include sprite($road);
+
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+      }
+
+      &--car {
+        @include sprite($desktop-car);
+
+        bottom: 65px;
+        left: 0;
+      }
+    }
+
+    .body-background-header {
+      display: initial;
+      position: absolute;
+
+      &--cloud-left {
+        @include sprite($desktop-cloud-left);
+
+        top: 41px;
+        left: 0;
+      }
+
+      &--cloud-right {
+        @include sprite($desktop-cloud-right);
+
+        top: 96px;
+        right: 0;
+      }
+    }
   }
 }

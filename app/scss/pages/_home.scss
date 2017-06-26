@@ -1,5 +1,6 @@
 .home {
   padding: 0;
+
   // ===========
   //  COMPONENTS
   // ========
@@ -8,4 +9,12 @@
   @import '../components/_steps.scss';
   @import '../components/_form.scss';
   @import '../components/_footer.scss';
+
+  // ===========
+  //  DESKTOP STYLES
+  // ========
+  @media (min-width: $screen-desktop) {
+    width: 960px;
+    margin: 0 auto;
+  }
 }

@@ -1,16 +1,46 @@
 .header {
-  @include sprite($mobile-header);
-
   position: relative;
   height: auto;
-  margin: 16px 0 0 0;
+  margin: 16px auto 0 auto;
   padding: 0;
   background-repeat: no-repeat;
+
+  &__background {
+    position: absolute;
+
+    &--left {
+      @include sprite($mobile-cloud-left);
+
+      left: 0;
+    }
+
+    &--middle {
+      @include sprite($mobile-cloud-middle);
+
+      top: 107px;
+      left: 0;
+      right: 0;
+      margin-left: auto;
+      margin-right: auto;
+      z-index: -1;
+    }
+
+    &--right {
+      @include sprite($mobile-cloud-right);
+
+      top: 194px;
+      right: 0;
+    }
+  }
 
   &__logo {
     @include sprite($logo);
 
     margin: 50px auto 36px auto;
+  }
+
+  &__share-icons {
+    display: none;
   }
 
   &__info {
@@ -37,5 +67,81 @@
     position: absolute;
     top: 39px;
     right: 9px;
+  }
+
+  // ===========
+  //  DESKTOP STYLES
+  // ========
+  @media (min-width: $screen-desktop) {
+    &__background {
+      z-index: -1;
+
+      &--left {
+        display: none;
+
+        @include sprite($desktop-cloud-left);
+      }
+
+      &--middle {
+        @include sprite($desktop-cloud-middle);
+
+        top: 157px;
+      }
+
+      &--right {
+        display: none;
+
+        @include sprite($desktop-cloud-right);
+      }
+    }
+
+    &__logo {
+      @include sprite($desktop-logo);
+
+      margin: 40px auto 109px auto;
+    }
+
+    &__share-icons {
+      position: absolute;
+      display: flex;
+      height: auto;
+      top: 44px;
+      right: 0;
+
+      &__facebook {
+        @include sprite($facebook);
+      }
+
+      &__twitter {
+        @include sprite($twitter);
+
+        margin: 0 10px;
+      }
+
+      &__instagram {
+        @include sprite($instagram);
+      }
+    }
+
+    &__info {
+      width: 678px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 59px;
+
+      p:first-child {
+        font-size: 53px;
+      }
+
+      p:last-child {
+        font-size: 20px;
+      }
+    }
+
+    &__golden-badge {
+      @include sprite($desktop-golden-badge);
+
+      top: 194px;
+    }
   }
 }
