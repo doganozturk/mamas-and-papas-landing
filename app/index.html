@@ -192,8 +192,11 @@
                 <label for="toptip">Share with us your top tip</label>
                 <textarea name="toptip" id="toptip" cols="30" rows="10" placeholder="Tell us in 200 words …" required></textarea>
               </div>
-              <div class="form__control form__control--button-variant form__control--button-variant-blue">
-                <input type="submit" value="PROCEED TO NEXT STEP">
+              <div id="textareaError" class="form__textarea-error">
+                <span>Wordcount is higher than 200!</span>
+              </div>
+              <div id="submit" class="form__control form__control--button-variant form__control--button-variant-blue">
+                <input type="submit" value="PROCEED TO NEXT STEP" onClick="return false;">
               </div>
             </form>
           </div>

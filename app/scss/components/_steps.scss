@@ -36,7 +36,7 @@
 
       p {
         position: absolute;
-        color: $white-color;
+        color: $steps-number-text-color;
         transform: rotate(-45deg);
 
         &:first-child {
@@ -59,7 +59,7 @@
       font-weight: bold;
       line-height: 25px;
       text-align: center;
-      color: $black-color;
+      color: $steps-info-color;
 
       &--variant-1 {
         width: 121px;

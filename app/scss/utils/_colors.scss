@@ -2,8 +2,6 @@
 //  COMMON
 // ========
 $background-color: #97c3be;
-$white-color: #fff;
-$black-color: #000;
 
 // ===========
 //  HEADER
@@ -13,6 +11,8 @@ $header-info-text-color: #2d3c4e;
 // ===========
 //  CALL-TO-ACTION
 // ========
+$call-to-action-title-color: #fff;
+$call-to-action-button-text-color: #fff;
 $call-to-action-info-text-color: #2d3c4e;
 $call-to-action-info-btn-color: #2d3c4e;
 
@@ -22,10 +22,15 @@ $call-to-action-info-btn-color: #2d3c4e;
 $steps-number-color-1: #2d3c4e;
 $steps-number-color-2: #e3af19;
 $steps-number-color-3: #6fb656;
+$steps-number-text-color: #fff;
+$steps-info-color: #000;
 
 // ===========
 //  FORM
 // ========
+$form-background-color: #fff;
+$form-select-background-color: #fff;
+$form-textarea-background-color: #fff;
 $form-text-color: #3f3f3f;
 $form-label-color: #3a3a3b;
 $form-input-border-color: #d9d9d9;
@@ -36,8 +41,14 @@ $form-group-background-color: #fafdfd;
 $form-group-button-color: #97c3be;
 $form-group-button-color-remove: red;
 $form-group-button-color-alternate: #2d3c4e;
+$form-group-input-background-color: #fff;
+$form-radio-background-color: #fff;
 $form-textarea-border-color: #d9d9d9;
+$form-textarea-error-message-color: red;
 $form-radio-border-color: #b2b2b2;
+$form-radio-border-color-checked: #000;
+$form-radio-background-color-checked: #000;
+$form-textarea-placeholder-color: #000;
 
 // ===========
 //  FOOTER

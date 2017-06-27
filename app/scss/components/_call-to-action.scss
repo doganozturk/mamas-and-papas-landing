@@ -3,7 +3,7 @@
   text-align: center;
 
   &__title {
-    color: $white-color;
+    color: $call-to-action-title-color;
     margin-bottom: 12px;
 
     p:first-child, p:nth-child(2) {
@@ -40,7 +40,7 @@
       height: 12px;
       margin: 0 auto;
       padding: 24px;
-      color: $white-color;
+      color: $call-to-action-button-text-color;
       background-color: $call-to-action-info-btn-color;
       cursor: pointer;
       transition: background-color .5s cubic-bezier(.185, .54, .355, 1);

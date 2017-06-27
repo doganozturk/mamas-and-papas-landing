@@ -1,7 +1,7 @@
 .form {
   height: auto;
   text-align: center;
-  background-color: $white-color;
+  background-color: $form-background-color;
 
   &__title {
     margin: 30px 0 20px 0;
@@ -48,6 +48,7 @@
         font-size: 14px;
         box-sizing: border-box;
         border: 2px solid $form-input-border-color;
+        outline: none;
       }
 
       &--birthdate-variant {
@@ -68,7 +69,7 @@
         }
       }
 
-      &--valid-variant {
+      &--valid-variant:not(.form__control--button-variant) {
         position: relative;
 
         input[type="text"], select, textarea {
@@ -104,7 +105,8 @@
         border: 2px solid $form-input-border-color;
         border-radius: 0;
         font-size: 14px;
-        background-color: $white-color;
+        background-color: $form-select-background-color;
+        outline: none;
       }
 
       &--select-variant {
@@ -143,6 +145,10 @@
         &-blue {
           margin-bottom: 30px;
           background-color: $form-group-button-color-alternate;
+
+          &:hover {
+            background-color: lighten($form-group-button-color-alternate, 5%);
+          }
         }
       }
 
@@ -153,16 +159,24 @@
         box-sizing: border-box;
         font-size: 14px;
         border: 2px solid $form-textarea-border-color;
-        background-color: $white-color;
+        background-color: $form-textarea-background-color;
+        outline: none;
       }
 
-      textarea::-webkit-input-placeholder {
-        color: $black-color;
+      textarea:-webkit-input-placeholder {
+        color: $form-textarea-placeholder-color;
       }
 
       textarea:-moz-placeholder {
-        color: $black-color;
+        color: $form-textarea-placeholder-color;
       }
+    }
+
+    .form__textarea-error {
+      display: none;
+      margin-bottom: 20px;
+      font-size: 14px;
+      color: $form-textarea-error-message-color;
     }
 
     .form__text {
@@ -178,7 +192,7 @@
       text-align: left;
 
       input[type="text"] {
-        background-color: $white-color;
+        background-color: $form-group-input-background-color;
       }
 
       &--add-child-variant {
@@ -223,7 +237,7 @@
             }
 
             &:checked + label:before {
-              border-color: $black-color;
+              border-color: $form-radio-border-color-checked;
             }
           }
 
@@ -244,7 +258,7 @@
               height: 16px;
               border: 2px solid $form-radio-border-color;
               border-radius: 50%;
-              background-color: $white-color;
+              background-color: $form-radio-background-color;
               cursor: pointer;
             }
 
@@ -255,7 +269,7 @@
               left: 6px;
               width: 8px;
               height: 8px;
-              background-color: $black-color;
+              background-color: $form-radio-background-color-checked;
               border-radius: 50%;
               transition: transform .3s;
               transform: scale(0);
@@ -373,7 +387,7 @@
           font-size: 16px;
         }
 
-        &--valid-variant {
+        &--valid-variant:not(.form__control--button-variant) {
           &:after {
             top: 52px;
             right: 0;
