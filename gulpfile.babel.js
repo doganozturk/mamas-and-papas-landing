@@ -145,7 +145,6 @@ gulp.task("html", () => {
             collapseWhitespace: true,
             collapseBooleanAttributes: true,
             removeAttributeQuotes: true,
-            removeRedundantAttributes: true,
             removeScriptTypeAttributes: true,
             removeStyleLinkTypeAttributes: true
           })

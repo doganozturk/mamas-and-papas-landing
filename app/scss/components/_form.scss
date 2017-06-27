@@ -112,6 +112,12 @@
       &--select-variant {
         position: relative;
 
+        &.form__control--valid-variant {
+          &:after {
+            top: 38px;
+          }
+        }
+
         &:after {
           @include sprite($select);
 
@@ -152,23 +158,31 @@
         }
       }
 
-      textarea {
-        width: 100%;
-        height: 100px;
-        padding: 18px 20px;
-        box-sizing: border-box;
-        font-size: 14px;
-        border: 2px solid $form-textarea-border-color;
-        background-color: $form-textarea-background-color;
-        outline: none;
-      }
+      &--textarea-variant {
+        textarea {
+          width: 100%;
+          height: 100px;
+          padding: 18px 20px;
+          box-sizing: border-box;
+          font-size: 14px;
+          border: 2px solid $form-textarea-border-color;
+          background-color: $form-textarea-background-color;
+          outline: none;
+        }
 
-      textarea:-webkit-input-placeholder {
-        color: $form-textarea-placeholder-color;
-      }
+        textarea:-webkit-input-placeholder {
+          color: $form-textarea-placeholder-color;
+        }
 
-      textarea:-moz-placeholder {
-        color: $form-textarea-placeholder-color;
+        textarea:-moz-placeholder {
+          color: $form-textarea-placeholder-color;
+        }
+
+        &.form__control--valid-variant {
+          &:after {
+            top: 46px;
+          }
+        }
       }
     }
 
@@ -193,16 +207,6 @@
 
       input[type="text"] {
         background-color: $form-group-input-background-color;
-      }
-
-      &--add-child-variant {
-        .form__control--valid-variant {
-          &:after {
-            @include sprite($valid);
-
-            top: 54px !important;
-          }
-        }
       }
 
       &--radio-variant {
@@ -416,13 +420,20 @@
             width: 208px;
             margin: 0 2px 20px 2px;
 
-            input[type="text"], select {
-              height: 48px;
+            input[type="text"], select, label {
               margin-top: 8px;
             }
 
-            label {
-              margin-top: 8px;
+            input[type="text"], select {
+              height: 48px;
+            }
+
+            &--valid-variant:not(.form__control--button-variant) {
+              &:after {
+                @include sprite($valid);
+
+                top: 54px;
+              }
             }
 
             &--button-variant {
